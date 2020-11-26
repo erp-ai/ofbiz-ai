@@ -557,6 +557,14 @@ under the License.
         <security https="true" auth="true"/>
         <response name="success" type="view" value="FindUserLogin"/>
     </request-map>
+    
+    <!-- ======= Testing a groovy Service ===== -->
+	<request-map uri="testGroovyService">
+ 		<security https="false" auth="false"/>
+		<event type="service" invoke="myGroovyService"/>
+ 		<response name="success" type="view" value="main"/>
+ 		<response name="error" type="view" value="main"/>
+	</request-map>
 
     <request-map uri="WebtoolsLayoutDemo"><security https="true" auth="true"/><response name="success" type="view" value="WebtoolsLayoutDemo"/></request-map>
     <request-map uri="WebtoolsLayoutDemoFop"><security https="true" auth="true"/><response name="success" type="view" value="WebtoolsLayoutDemoFop"/></request-map>

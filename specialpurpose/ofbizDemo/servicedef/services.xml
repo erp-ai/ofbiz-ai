@@ -31,4 +31,23 @@
         <override name="comments" optional="true"/>
     </service>
 
+    <service name="Ejemplo" default-entity-name="OfbizDemo" engine="java"
+        location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createOfbizDemo" auth="true">
+        <description>Create an Ofbiz Demo record using a service in Java</description>
+        <auto-attributes include="pk" mode="OUT" optional="false"/>
+        <auto-attributes include="nonpk" mode="IN" optional="false"/>
+        <override name="comments" optional="true"/>
+    </service>
+    
+    
+    <service name="testScv" engine="java" export="true"
+ 			validate="false" require-new-transaction="true"
+ 			location="org.ofbiz.common.CommonServices" invoke="testScv">
+ 		<description>Test service</description>
+ 		<attribute name="defaultValue" type="Double"
+ 			mode="IN" default-value="999.9999"/>
+ 		<attribute name="message" type="String" mode="IN" optional="true"/>
+ 		<attribute name="resp" type="String" mode="OUT"/>
+	</service>
+
 </services>

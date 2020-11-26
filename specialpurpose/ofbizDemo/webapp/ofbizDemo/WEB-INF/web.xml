@@ -28,7 +28,7 @@
         <param-value>/error:/control:/select:/index.html:/index.jsp:/default.html:/default.jsp:/images:/includes/maincss.css:/css:/js</param-value>
     </init-param>
 
-    
+
     <!--
     <context-param>
         <param-name>widgetVerbose</param-name>

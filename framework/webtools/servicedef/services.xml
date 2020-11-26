@@ -141,4 +141,19 @@ under the License.
         <attribute name="localeValues" type="List" mode="IN" optional="true"/>
         <attribute name="localeComments" type="List" mode="IN" optional="true"/>
     </service>
+    
+    <service name="myService" engine="SupportedEngine"
+ 		location="somewhere.on.the.classpath" invoke="myService">
+ 		<attribute name="attribute1" type="String" mode="IN"
+ 		optional="true"/>
+ 		<attribute name="attribute2" type="String" mode="IN"
+ 		optional="false"/>
+ 		<attribute name="attribute3" type="String" mode="INOUT"/>
+	</service>
+	
+	<service name="myGroovyService" engine="groovy"
+ 		location="component://myComponent/script/myGroovyService.groovy"
+ 		invoke="">
+	</service>
+
 </services>

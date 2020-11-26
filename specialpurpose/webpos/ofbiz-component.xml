@@ -44,12 +44,6 @@ under the License.
     <service-resource type="model" loader="main" location="servicedef/services_payment.xml"/>
     <service-resource type="model" loader="main" location="servicedef/services_promo.xml"/>
 
-    <webapp name="webpos"
-        title="Web Pos"
-        server="default-server"
-        menu-name="secondary"
-        location="webapp/webpos"
-        base-permission="WEBPOS"
-        mount-point="/webpos"
-        app-bar-display="true"/>
+    <webapp name="webpos" title="Web Pos" server="default-server" menu-name="secondary" location="webapp/webpos" base-permission="WEBPOS" mount-point="/webpos"app-bar-display="true"/>
+    
 </ofbiz-component>

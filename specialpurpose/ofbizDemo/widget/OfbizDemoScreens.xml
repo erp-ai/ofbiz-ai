@@ -109,7 +109,19 @@
        </section>
     </screen>
 
-    
+    <screen name="Ejemplo">
+        <section>
+            <actions>
+            </actions>
+
+            <widgets>
+                <platform-specific>
+                    <html><html-template location="component://ofbizDemo/webapp/ofbizDemo/includes/EjemploOct12.ftl"/></html>
+                </platform-specific>
+            </widgets>
+        </section>
+    </screen>
+
     <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
     </decorator-screen>
     

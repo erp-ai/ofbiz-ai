@@ -48,6 +48,14 @@
         <security https="true" auth="true"/>
         <response name="success" type="view" value="AddOfbizDemoFtl"/>
     </request-map>
+    
+
+    <!--Request Mapping ejemplo-->
+    <request-map uri="Ejemplo">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="Ejemplo"/>
+    </request-map>
+
  
     <!--View Mapping-->
     <view-map name="AddOfbizDemoFtl" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#AddOfbizDemoFtl"/>
@@ -61,4 +69,12 @@
    
     <!-- View Mapping -->
     <view-map name="FindOfbizDemo" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#FindOfbizDemo"/>
+
+
+    <!--View Mapping-->
+    <view-map name="Ejemplo" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#Ejemplo"/>
+ 
+
+    <!-- View Mappings -->
+    <view-map name="main" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#main"/>
 </site-conf>
