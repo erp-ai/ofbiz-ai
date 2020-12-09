@@ -39,9 +39,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 body {
     line-height: 1.5em;
-    color: black;
-    _background-image: url:(. . /images/ header_top_bg . gif);
-    background-color: black;
+    color:  rgb(0, 0, 0);
+    _background-image: "url:(. . /images/ header_top_bg . gif)";
+    background-color: #00a7e1;
     font-size: 62.5%;
     position: relative;
 }
@@ -772,7 +772,7 @@ DIV.no-padding {
     margin: auto;
     padding: 0 5px 5px 5px;
     position: relative;
-    background: #81817F url(../images/bkgd_page.gif) repeat-x scroll 0 0;
+    background: rgb(255, 255, 255) url(../images/bkgd_page.gif) repeat-x scroll 0 0;
 }
 
 #column-container h1, #column-container .h1 {
@@ -1167,7 +1167,7 @@ ul#preferences-menu li a.help-link {
 
 #main-navigation ul li ul,
 #app-navigation ul li ul {
-    background-color: #131212;
+    background-color: #e82287;
     border-right: 4px solid #131212;
     position: absolute;
     opacity: 0.96;
@@ -1180,7 +1180,7 @@ ul#preferences-menu li a.help-link {
 
 #main-navigation ul li ul li ul.secondary {
     left: 204px;
-    background-color: #1b1919;
+    background-color: #e82287;
 }
 
 #main-navigation ul li ul li a,
@@ -1194,7 +1194,7 @@ ul#preferences-menu li a.help-link {
 
 #main-navigation ul li ul li a:hover,
 #app-navigation ul li ul li a:hover {
-    background-color: #8f7915;
+    background-color: #68cbed;
     text-decoration: none;
 }
 
@@ -1205,7 +1205,7 @@ ul#preferences-menu li a.help-link {
 
 #main-navigation ul li ul li.selected a,
 #app-navigation ul li ul li.selected a {
-    background-color: #edca2d;
+    background-color: #00B5EC;
     color: #000000;
 }
 
@@ -1237,7 +1237,7 @@ ul#preferences-menu li a.help-link {
     height: 1%;
     padding-bottom: 10px;
     margin-bottom: 1em;
-    background-color: #BFBFBF;
+    background-color: #FFFFFF;
     overflow: auto;
 }
 
@@ -1666,7 +1666,7 @@ tr:hover td div.in-line-bar li ul {
 /* tab-bar decorator intended to be used at
 the top of the main content area */
 .tab-bar {
-    background-color: #837f87;
+    background-color: #ed0bae;
     background-image: url(../images/tab_bar.gif);
     background-repeat: repeat-x;
     padding: 5px 10px 0px 10px;
@@ -2443,7 +2443,7 @@ Lookups
 }
 
 .row-level-one.alternate-row {
-    background-color: #81817F;
+    background-color: #FFFFFF;
 }
 
 .row-level-two {

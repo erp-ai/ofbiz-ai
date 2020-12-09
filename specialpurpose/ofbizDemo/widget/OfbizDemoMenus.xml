@@ -4,6 +4,6 @@
         <menu-item name="main" title="${uiLabelMap.CommonMain}"><link target="main"/></menu-item>
         <menu-item name="findOfbizDemo" title="${uiLabelMap.OfbizDemoFind}"><link target="FindOfbizDemo"/></menu-item>
         <menu-item name="addOfbizDemoFtl" title="${uiLabelMap.OfbizDemoAddFtl}"><link target="AddOfbizDemoFtl"/></menu-item> 
-        <menu-item name="Ejemplo" title="${uiLabelMap.Ejemplo}"><link target="Ejemplo"/></menu-item> 
+        <menu-item name="Ejemplo" title="${uiLabelMap.EjemploProspectos}"><link target="Ejemplo"/></menu-item> 
     </menu>
 </menus>        
