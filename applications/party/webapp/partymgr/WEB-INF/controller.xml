@@ -341,8 +341,15 @@ under the License.
         <response name="success" type="view" value="viewprofile"/>
         <response name="error" type="view" value="viewprofile"/>
     </request-map>
+    
+   <request-map uri="createMensaje">
+   		<security https="true" auth="true"/>
+   		<event type="service" invoke="createMensaje"/>
+   		<response name="success" type="view" value="main"/>
+   </request-map> 
 
-    <request-map uri="NewCustomer"><security https="true" auth="true"/><response name="success" type="view" value="NewCustomer"/></request-map>
+	<!-- Carga el formulario  -->
+    <request-map uri="NewCustomer"><security https="true" auth="true"/><response name="success" type="view" value="NewCustomer"/></request-map> 
     <request-map uri="createCustomer">
         <security https="true" auth="true"/>
         <event type="simple" path="component://party/minilang/user/UserEvents.xml" invoke="createCustomer"/>

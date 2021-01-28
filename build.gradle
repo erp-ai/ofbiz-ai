@@ -968,7 +968,6 @@ def generateFileFromTemplate(templateFileInFullPath, targetDirectory, filterToke
         into targetDirectory
     }
 }
-
 def getJarManifestClasspathForCurrentOs() {
     def osClassPath = ''
     if (os.contains('windows')) {

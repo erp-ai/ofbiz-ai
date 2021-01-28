@@ -565,6 +565,13 @@ under the License.
         <attribute name="partyIdFrom" type="String" mode="IN" optional="false"/>
         <attribute name="partyIdTo" type="String" mode="IN" optional="false"/>
     </service>
+    
+    <service name="createMensaje" default-entity-name="Mensajes"  engine="entity-auto" invoke="create" auth="true">
+    	<description>Create mensaje</description>
+    	<auto-attributes include="pk" mode="OUT" optional="false"></auto-attributes>
+    	<auto-attributes include="nonpk" mode="IN" optional="false"></auto-attributes>
+    	<override name="comments" optional="true"/>
+    </service>
 
     <!-- contact mech attribute services -->
     <service name="createContactMechAttribute" engine="entity-auto" default-entity-name="ContactMechAttribute" invoke="create" auth="true">

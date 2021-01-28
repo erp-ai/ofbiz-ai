@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing PERmissions and limitations
+under the License.
+-->
+
+<entity-engine-xml>
+    <Geo abbreviation="AM" geoCode="AM" geoId="PE-AM" geoName="Amazonas" geoTypeId="STATE"/>
+    <Geo abbreviation="AC" geoCode="AC" geoId="PE-AC" geoName="Ancash" geoTypeId="STATE"/>
+    <Geo abbreviation="NT" geoCode="NT" geoId="PE-NT" geoName="Apurimac" geoTypeId="STATE"/>
+    <Geo abbreviation="AR" geoCode="AR" geoId="PE-AR" geoName="Arequipa" geoTypeId="STATE"/>
+    <Geo abbreviation="AY" geoCode="AY" geoId="PE-AY" geoName="Ayacucho" geoTypeId="STATE"/>
+    <Geo abbreviation="CJ" geoCode="CJ" geoId="PE-CJ" geoName="Cajamarca" geoTypeId="STATE"/>
+    <Geo abbreviation="CLL" geoCode="CLL" geoId="PE-CLL" geoName="Callao" geoTypeId="STATE"/>
+    <Geo abbreviation="CS" geoCode="CS" geoId="PE-CS" geoName="Cusco" geoTypeId="STATE"/>
+    <Geo abbreviation="HV" geoCode="HV" geoId="PE-HV" geoName="Huancavelica" geoTypeId="STATE"/>
+    <Geo abbreviation="HN" geoCode="HN" geoId="PE-HN" geoName="Huanuco" geoTypeId="STATE"/>
+    <Geo abbreviation="I" geoCode="I" geoId="PE-I" geoName="Ica" geoTypeId="STATE"/>
+    <Geo abbreviation="JN" geoCode="JN" geoId="PE-JN" geoName="Junín" geoTypeId="STATE"/>
+    <Geo abbreviation="LB" geoCode="LB" geoId="PE-LB" geoName="La Libertad" geoTypeId="STATE"/>
+    <Geo abbreviation="LY" geoCode="LY" geoId="PE-LY" geoName="Lambayeque" geoTypeId="STATE"/>
+    <Geo abbreviation="LM" geoCode="LM" geoId="PE-LM" geoName="Lima" geoTypeId="STATE"/>
+    <Geo abbreviation="LT" geoCode="LT" geoId="PE-LT" geoName="Loreto" geoTypeId="STATE"/>
+    <Geo abbreviation="MD" geoCode="MD" geoId="PE-MD" geoName="Madre de Dios" geoTypeId="STATE"/>
+    <Geo abbreviation="MQ" geoCode="MQ" geoId="PE-MQ" geoName="Moquegua" geoTypeId="STATE"/>
+    <Geo abbreviation="PC" geoCode="PC" geoId="PE-PC" geoName="Pasco" geoTypeId="STATE"/>
+    <Geo abbreviation="PR" geoCode="PR" geoId="PE-PR" geoName="Piura" geoTypeId="STATE"/>
+    <Geo abbreviation="PN" geoCode="PN" geoId="PE-PN" geoName="Puno" geoTypeId="STATE"/>
+    <Geo abbreviation="SM" geoCode="SM" geoId="PE-SM" geoName="San Martín" geoTypeId="STATE"/>
+    <Geo abbreviation="TC" geoCode="TC" geoId="PE-TC" geoName="Tacna" geoTypeId="STATE"/>
+    <Geo abbreviation="TB" geoCode="TB" geoId="PE-TB" geoName="Tumbes" geoTypeId="STATE"/>
+    <Geo abbreviation="UY" geoCode="UY" geoId="PE-UY" geoName="Ucayali" geoTypeId="STATE"/>
+
+    <GeoAssoc geoId="PER" geoIdTo="PE-AM" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-AC" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-NT" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-AR" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-AY" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-CJ" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-CLL" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-CS" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-HV" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-HN" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-I" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-JN" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-LB" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-LY" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-LM" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-LT" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-MD" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-MQ" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-PC" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-PR" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-PN" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-SM" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-TC" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-TB" geoAssocTypeId="REGIONS"/>
+    <GeoAssoc geoId="PER" geoIdTo="PE-UY" geoAssocTypeId="REGIONS"/>
+    
+</entity-engine-xml>

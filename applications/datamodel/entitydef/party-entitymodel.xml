@@ -980,6 +980,9 @@ under the License.
       <relation type="many" rel-entity-name="ContactMechTypeAttr">
         <key-map field-name="contactMechTypeId"/>
       </relation>
+       <index name="emai" unique="true">
+            <index-field name="infoString"/>
+        </index>
       <index name="INFO_STRING_IDX">
         <index-field name="infoString"/>
       </index>
@@ -1217,6 +1220,9 @@ under the License.
       <field name="attnName" type="name"></field>
       <field name="address1" type="long-varchar"></field>
       <field name="address2" type="long-varchar"></field>
+      <field name="municipio" type="description"></field>
+      <field name="referencia" type="description"></field>
+      <field name="interior" type="description"></field>
       <field name="houseNumber" type="numeric"></field>
       <field name="houseNumberExt" type="short-varchar"></field>
       <field name="directions" type="long-varchar"></field>
@@ -1282,6 +1288,11 @@ under the License.
         <key-map field-name="geoId"/>
       </relation>
     </entity>
+    <entity entity-name="Mensajes" package-name="org.apache.ofbiz.party.party" title="Mensajes Entity">
+   		<field name="partyId" type="description"></field>
+   		<field name="mensaje" type="description"></field>
+   		<prim-key field="partyId"/>
+    </entity>
     <entity entity-name="TelecomNumber"
             package-name="org.apache.ofbiz.party.contact"
             title="Telecommunications Number Entity">
@@ -1294,6 +1305,9 @@ under the License.
       <relation type="one" fk-name="TEL_NUM_CMECH" rel-entity-name="ContactMech">
         <key-map field-name="contactMechId"/>
       </relation>
+      <index name="number" unique="true">
+            <index-field name="contactNumber"/>
+        </index>
       <index name="COUNTRY_CODE_IDX">
         <index-field name="countryCode"/>
       </index>

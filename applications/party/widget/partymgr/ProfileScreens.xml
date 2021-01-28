@@ -146,6 +146,7 @@
                 <platform-specific>
                     <html>
                         <html-template location="component://party/template/party/profileblocks/Contact.ftl"/>
+                        <html-template location="component://party/template/party/profileblocks/Mensajes.ftl"/>
                     </html>
                 </platform-specific>
             </widgets>
@@ -445,8 +446,8 @@
             </widgets>
         </section>
     </screen>
-
-    <screen name="ContentList">
+    
+     <screen name="ContentList">
         <section>
             <actions>
                 <set field="partyId" from-field="parameters.partyId" default-value="${userLogin.partyId}"/>

@@ -19,6 +19,10 @@ under the License.
   <div>
     <#if postalAddress.toName?has_content><b>${uiLabelMap.PartyAddrToName}:</b> ${postalAddress.toName}<br /></#if>
     <#if postalAddress.attnName?has_content><b>${uiLabelMap.PartyAddrAttnName}:</b> ${postalAddress.attnName}<br /></#if>
+    <#if postalAddress.municipio?has_content><b>Municipio:</b> ${postalAddress.municipio}<br /></#if>
+    <#if postalAddress.referencia?has_content><b>Referencia:</b> ${postalAddress.referencia}<br /></#if>
+    <#if postalAddress.interior?has_content><b>No.Intreior:</b> ${postalAddress.interior}<br /></#if>
+    <#if postalAddress.stateProvinceGeoId?has_content><b>Estado:</b> ${postalAddress.stateProvinceGeoId}<br /></#if>
     ${postalAddress.address1!}<br />
     <#if postalAddress.address2?has_content>${postalAddress.address2}<br /></#if>
     ${postalAddress.city!},

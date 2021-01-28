@@ -158,6 +158,21 @@
         <value xml:lang="zh">产品目录管理，包括分类、产品、价格规则、促销、产品店铺</value>
         <value xml:lang="zh-TW">產品型錄管理,包括分類、產品、價格規則、促銷、產品商店</value>
     </property>
+
+    <property key="CommonMunicipio">
+        <value xml:lang="en">Municipio</value>
+        <value xml:lang="es">Municipio</value>
+    </property>
+
+    <property key="CommonReferencia">
+        <value xml:lang="en">Referencia</value>
+        <value xml:lang="es">Referencia</value>
+    </property>
+
+    <property key="CommonInterior">
+        <value xml:lang="en">Interior</value>
+        <value xml:lang="es">Interior</value>
+    </property>
     <property key="CommonAbort">
         <value xml:lang="ar">إلغاء</value>
         <value xml:lang="cs">Zrušit</value>
@@ -491,6 +506,11 @@
         <value xml:lang="zh">地址二</value>
         <value xml:lang="zh-CN">地址 2</value>
         <value xml:lang="zh-TW">位址 2</value>
+    </property>
+    <property key="CommonMensaje">
+        <value xml:lang="de">Mensaje</value>
+        <value xml:lang="en">Mensaje</value>
+        <value xml:lang="es">Mensaje</value>
     </property>
     <property key="CommonAddressLine">
         <value xml:lang="ar">عنوان</value>
