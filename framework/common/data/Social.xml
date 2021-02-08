@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<entity-engine-xml>
+    <Redes partyId="1" social="Facebook"/>
+    <Redes partyId="2" social="Google add"/>
+    <Redes partyId="3" social="Twitter"/>
+    <Redes partyId="4" social="Instagram"/>
+    <Redes partyId="5" social="Publicidad exterior"/>
+
+    <Sexo  par="1" sexoo="Masculino"/>
+    <Sexo  par="2" sexoo="Femenino"/>
+    <Sexo  par="3" sexoo="otr@"/>
+
+    <optionn p="1" option="Si"/>
+    <optionn p="2" option="No"/>
+
+    <MuPuebla no="1" Muni="Puebla"/>
+   <MuPuebla no="2" Muni="Tehuacan"/>
+   <MuPuebla no="3" Muni="San Martin Texmelucan"/>
+   <MuPuebla no="4" Muni="Atlixco"/>
+   <MuPuebla no="5" Muni="San Pedro Cholula"/>
+   <MuPuebla no="6" Muni="Amozoc"/>
+   <MuPuebla no="7" Muni="San Andres Cholula"/>
+   <MuPuebla no="8" Muni="Huauchinango"/>
+   <MuPuebla no="9" Muni="Teziutlan"/>
+   <MuPuebla no="10" Muni="Cuautlancingo"/>
+   <MuPuebla no="11" Muni="Zacatlan"/>
+   <MuPuebla no="12" Muni="Xicotepec"/>
+   <MuPuebla no="13" Muni="Tepeaca"/>
+   <MuPuebla no="14" Muni="Izucar de Matamoros"/>
+   <MuPuebla no="15" Muni="Tecamachalco"/>
+   <MuPuebla no="16" Muni="Huejotzingo"/>
+   <MuPuebla no="17" Muni="Ajalpan"/>
+   <MuPuebla no="18" Muni="Acajete"/>
+   <MuPuebla no="19" Muni="Chignahuapan"/>
+   <MuPuebla no="20" Muni="Zacapoaxtla"/>
+
+   <MuPuebla no="21" Muni="Acatzingo"/>
+   <MuPuebla no="22" Muni="Tlatlauquitepec"/>
+   <MuPuebla no="23" Muni="Tlacotepec de Benito Juarez"/>
+   <MuPuebla no="24" Muni="Cuetzalan del Progreso"/>
+   <MuPuebla no="25" Muni="Quecholac"/>
+   <MuPuebla no="26" Muni="Chalchicomula de Sesma"/>
+   <MuPuebla no="27" Muni="Palmar de Bravo"/>
+   <MuPuebla no="28" Muni="Xiutetelco"/>
+   <MuPuebla no="29" Muni="Tlahuapan"/>
+   <MuPuebla no="30" Muni="Coronango"/>
+   <MuPuebla no="31" Muni="Chietla"/>
+   <MuPuebla no="32" Muni="Acatlan"/>
+   <MuPuebla no="33" Muni="Libres"/>
+   <MuPuebla no="34" Muni="Chignautla"/>
+   <MuPuebla no="35" Muni="Tlachichuca"/>
+   <MuPuebla no="36" Muni="San Salvador el Verde"/>
+   <MuPuebla no="37" Muni="Venustiano Carranza"/>
+   <MuPuebla no="38" Muni="San Salvador el Seco"/>
+   <MuPuebla no="39" Muni="Nopalucan"/>
+   <MuPuebla no="40" Muni="Hueytamalco"/>
+
+
+   <MuPuebla no="41" Muni="Tetela de Ocampo"/>
+   <MuPuebla no="42" Muni="Ocoyucan"/>
+   <MuPuebla no="43" Muni="Los Reyes de Juárez"/>
+   <MuPuebla no="44" Muni="Atempan"/>
+   <MuPuebla no="45" Muni="Huaquechula"/>
+   <MuPuebla no="46" Muni="Ixtacamaxtitlan"/>
+   <MuPuebla no="47" Muni="Vicente Guerrero"/>
+   <MuPuebla no="48" Muni="Chichiquila"/>
+   <MuPuebla no="49" Muni="Yehualtepec"/>
+   <MuPuebla no="50" Muni="Santiago Miahuatlán"/>
+   <MuPuebla no="51" Muni="Quimixtlan"/>
+   <MuPuebla no="52" Muni="Pahuatlan"/>
+   <MuPuebla no="53" Muni="Zoquitlan"/>
+   <MuPuebla no="54" Muni="Tepexi de Rodríguez"/>
+   <MuPuebla no="55" Muni="Tecali de Herrera"/>
+   <MuPuebla no="56" Muni="Tlaola"/>
+   <MuPuebla no="57" Muni="Tochtepec"/>
+   <MuPuebla no="58" Muni="Coxcatlan"/>
+   <MuPuebla no="59" Muni="Zautla"/>
+   <MuPuebla no="60" Muni="San Matias Tlalancaleca"/>
+
+
+   <MuPuebla no="61" Muni="Chilchotla"/>
+   <MuPuebla no="62" Muni="General Felipe Angeles"/>
+   <MuPuebla no="63" Muni="Chiautla"/>
+   <MuPuebla no="64" Muni="Tepanco de Lopez"/>
+   <MuPuebla no="65" Muni="Cañada Morelos"/>
+   <MuPuebla no="66" Muni="Altepexi"/>
+   <MuPuebla no="67" Muni="Chiautzingo"/>
+   <MuPuebla no="68" Muni="Juan C. Bonilla"/>
+   <MuPuebla no="69" Muni="Pantepec"/>
+   <MuPuebla no="70" Muni="Tlacuilotepec"/>
+   <MuPuebla no="71" Muni="Tochimilco"/>
+   <MuPuebla no="72" Muni="Oriental"/>
+   <MuPuebla no="73" Muni="Guadalupe Victoria"/>
+   <MuPuebla no="74" Muni="Tepeyahualco"/>
+   <MuPuebla no="75" Muni="Tepatlaxco de Hidalgo"/>
+   <MuPuebla no="76" Muni="Francisco Z. Mena"/>
+   <MuPuebla no="77" Muni="Chiconcuautla"/>
+   <MuPuebla no="78" Muni="Zinacatepec"/>
+   <MuPuebla no="79" Muni="Huehuetla"/>
+   <MuPuebla no="80" Muni="Zaragoza"/>
+
+
+   <MuPuebla no="81" Muni="Cuyoaco"/>
+   <MuPuebla no="82" Muni="Ahuacatlan"/>
+   <MuPuebla no="83" Muni="San Gabriel Chilac"/>
+   <MuPuebla no="84" Muni="Coyomeapan"/>
+   <MuPuebla no="85" Muni="Rafael Lara Grajales"/>
+   <MuPuebla no="86" Muni="Huitzilan de Serdan"/>
+   <MuPuebla no="87" Muni="Esperanza"/>
+   <MuPuebla no="88" Muni="Calpan"/>
+   <MuPuebla no="89" Muni="San Salvador Huixcolotla"/>
+   <MuPuebla no="90" Muni="San Sebastian Tlacotepec"/>
+   <MuPuebla no="91" Muni="Jopala"/>
+   <MuPuebla no="92" Muni="San Jose Miahuatlan"/>
+   <MuPuebla no="93" Muni="Jolalpan"/>
+   <MuPuebla no="94" Muni="Eloxochitlan"/>
+   <MuPuebla no="95" Muni="Jalpan"/>
+   <MuPuebla no="96" Muni="Zihuateutla"/>
+   <MuPuebla no="97" Muni="Xochitlan de Vicente Suarez"/>
+   <MuPuebla no="98" Muni="Nealtican"/>
+   <MuPuebla no="99" Muni="Hueyapan"/>
+   <MuPuebla no="100" Muni="Soltepec"/>
+
+
+   <MuPuebla no="101" Muni="Atzitzihuacan"/>
+   <MuPuebla no="102" Muni="Atzitzihuacan"/>
+   <MuPuebla no="103" Muni="San Miguel Xoxtla"/>
+   <MuPuebla no="104" Muni="Tehuitzingo"/>
+   <MuPuebla no="105" Muni="San Nicolás de los Ranchos"/>
+   <MuPuebla no="106" Muni="Ahuazotepec"/>
+   <MuPuebla no="107" Muni="Tepetzintla"/>
+   <MuPuebla no="108" Muni="Juan Galindo"/>
+   <MuPuebla no="109" Muni="Tianguismanalco"/>
+   <MuPuebla no="110" Muni="Naupan"/>
+   <MuPuebla no="111" Muni="Cuautinchan"/>
+   <MuPuebla no="112" Muni="San Felipe Teotlalcingo"/>
+   <MuPuebla no="113" Muni="Petlalcingo"/>
+   <MuPuebla no="114" Muni="Tulcingo"/>
+   <MuPuebla no="115" Muni="Cuautempan"/>
+   <MuPuebla no="116" Muni="San Nicolás Buenos Aires"/>
+   <MuPuebla no="117" Muni="Acateno"/>
+   <MuPuebla no="118" Muni="Cuapiaxtla de Madero"/>
+   <MuPuebla no="119" Muni="Huehuetlan el Chico"/>
+   <MuPuebla no="120" Muni="Atzitzintla"/>
+
+
+   <MuPuebla no="121" Muni="Tlapanala"/>
+   <MuPuebla no="122" Muni="Tilapa"/>
+   <MuPuebla no="123" Muni="Zapotitlan"/>
+   <MuPuebla no="124" Muni="San Gregorio Atzompa"/>
+   <MuPuebla no="125" Muni="Ayotoxco de Guerrero"/>
+   <MuPuebla no="126" Muni="Ixcaquixtla"/>
+   <MuPuebla no="127" Muni="San Jose Chiapa"/>
+   <MuPuebla no="128" Muni="Tepeojuma"/>
+   <MuPuebla no="129" Muni="Santa Isabel Cholula"/>
+   <MuPuebla no="130" Muni="Santo Tomas Hueyotlipan"/>
+   <MuPuebla no="131" Muni="Aquixtla"/>
+   <MuPuebla no="132" Muni="Lafragua"/>
+   <MuPuebla no="133" Muni="Hermenegildo Galeana"/>
+   <MuPuebla no="134" Muni="Yaonahuac"/>
+   <MuPuebla no="135" Muni="Honey"/>
+   <MuPuebla no="136" Muni="Huehuetlan el Grande"/>
+   <MuPuebla no="137" Muni="Chapulco"/>
+   <MuPuebla no="138" Muni="Domingo Arenas"/>
+   <MuPuebla no="139" Muni="Ixtepec"/>
+   <MuPuebla no="140" Muni="Tenampulco"/>
+
+
+   <MuPuebla no="141" Muni="Huatlatlauca"/>
+   <MuPuebla no="142" Muni="Tepexco"/>
+   <MuPuebla no="143" Muni="Atoyatempan"/>
+   <MuPuebla no="144" Muni="Tlapacoya"/>
+   <MuPuebla no="145" Muni="Aljojuca"/>
+   <MuPuebla no="146" Muni="Guadalupe"/>
+   <MuPuebla no="147" Muni="Tlaltenango"/>
+   <MuPuebla no="148" Muni="Tzicatlacoyan"/>
+   <MuPuebla no="149" Muni="Molcaxac"/>
+   <MuPuebla no="150" Muni="Xochitlan Todos Santos"/>
+   <MuPuebla no="151" Muni="Nicolas Bravo"/>
+   <MuPuebla no="152" Muni="Tuzamapan de Galeana"/>
+   <MuPuebla no="153" Muni="Santa Ines Ahuatempan"/>
+   <MuPuebla no="154" Muni="San Jeronimo Tecuanipan"/>
+   <MuPuebla no="155" Muni="Hueytlalpan"/>
+   <MuPuebla no="156" Muni="Teteles de Avila Castillo"/>
+   <MuPuebla no="157" Muni="Zapotitlan de Mendez"/>
+   <MuPuebla no="158" Muni="Tecomatlan"/>
+   <MuPuebla no="159" Muni="Tlaxco"/>
+   <MuPuebla no="160" Muni="Huitziltepec"/>1
+
+
+   <MuPuebla no="161" Muni="Juan N. Mendez"/>
+   <MuPuebla no="162" Muni="San Antonio Cañada"/>
+   <MuPuebla no="163" Muni="Amixtlan"/>
+   <MuPuebla no="164" Muni="Tlanepantla"/>
+   <MuPuebla no="165" Muni="Ocotepec"/>
+   <MuPuebla no="166" Muni="Cohuecan"/>
+   <MuPuebla no="167" Muni="Chila"/>
+   <MuPuebla no="168" Muni="Zongozotla"/>
+   <MuPuebla no="169" Muni="Jonotla"/>
+   <MuPuebla no="170" Muni="Epatlan"/>
+   <MuPuebla no="171" Muni="Piaxtla"/>
+   <MuPuebla no="172" Muni="Tepango de Rodriguez"/>
+   <MuPuebla no="173" Muni="Zacapala"/>
+   <MuPuebla no="174" Muni="Caltepec"/>
+   <MuPuebla no="175" Muni="San Felipe Tepatlan"/>
+   <MuPuebla no="176" Muni="Teopantlan"/>
+   <MuPuebla no="177" Muni="Xochiapulco"/>
+   <MuPuebla no="178" Muni="Caxhuacan"/>
+   <MuPuebla no="179" Muni="San Jeronimo Xayacatlan"/>
+   <MuPuebla no="180" Muni="Atexcal"/>
+
+
+   <MuPuebla no="181" Muni="Ixcamilpa de Guerrero"/>
+   <MuPuebla no="182" Muni="Nauzontla"/>
+   <MuPuebla no="183" Muni="San Pablo Anicano"/>
+   <MuPuebla no="184" Muni="San Juan Atenco"/>
+   <MuPuebla no="185" Muni="Ahuatlan"/>
+   <MuPuebla no="186" Muni="San Pedro Yeloixtlahuaca"/>
+   <MuPuebla no="187" Muni="Tepeyahualco de Cuauhtemoc"/>
+   <MuPuebla no="188" Muni="Xochiltepec"/>
+   <MuPuebla no="189" Muni="Teotlalco"/>
+   <MuPuebla no="190" Muni="Cuayuca de Andrade"/>
+   <MuPuebla no="191" Muni="Coatzingo"/>
+   <MuPuebla no="192" Muni="Acteopan"/>
+   <MuPuebla no="193" Muni="Atlequizayan"/>
+   <MuPuebla no="194" Muni="Zoquiapan"/>
+   <MuPuebla no="195" Muni="Mazapiltepec de Juarez"/>
+   <MuPuebla no="196" Muni="Camocuautla"/>
+   <MuPuebla no="197" Muni="Chinantla"/>
+   <MuPuebla no="198" Muni="Coyotepec"/>
+   <MuPuebla no="199" Muni="Mixtla"/>
+   <MuPuebla no="200" Muni="Ahuehuetitla"/>
+
+
+   <MuPuebla no="201" Muni="Albino Zertuche"/>
+   <MuPuebla no="202" Muni="Xayacatlan de Bravo"/>
+   <MuPuebla no="203" Muni="Cohetzala"/>
+   <MuPuebla no="204" Muni="Xicotlan"/>
+   <MuPuebla no="205" Muni="Chila de la Sal"/>
+   <MuPuebla no="206" Muni="Atzala"/>
+   <MuPuebla no="207" Muni="Chigmecatitlan"/>
+   <MuPuebla no="208" Muni="Totoltepec de Guerrero"/>
+   <MuPuebla no="209" Muni="Tepemaxalco"/>
+   <MuPuebla no="210" Muni="San Diego la Mesa Tochimiltzingo"/>
+   <MuPuebla no="211" Muni="Axutla"/>
+   <MuPuebla no="212" Muni="Santa Catarina Tlaltempan"/>
+   <MuPuebla no="213" Muni="San Juan Atzompa"/>
+   <MuPuebla no="214" Muni="Coatepec"/>
+   <MuPuebla no="215" Muni="San Martin Totoltepec"/>
+   <MuPuebla no="216" Muni="San Miguel Ixitlan"/>
+   <MuPuebla no="217" Muni="La Magdalena Tlatlauquitepec"/>
+</entity-engine-xml>

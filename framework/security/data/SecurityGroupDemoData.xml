@@ -25,6 +25,7 @@ under the License.
     <SecurityGroup groupId="FLEXADMIN" description="Flexible Admin group, has all granular permissions."/>
     <SecurityGroup groupId="VIEWADMIN" description="Demo Admin group, has all view permissions."/>
     <SecurityGroup groupId="BIZADMIN" description="Full Business Applications permission group, has all business app admin permissions, not technical permissions."/>
+    <SecurityGroup groupId="ventas" description="Grupo de ventas"/>
     
     <!-- general admin tools permission -->
     <SecurityPermission description="Permission to access the Stock OFBiz Manager Applications." permissionId="OFBTOOLS_VIEW"/>
@@ -32,7 +33,10 @@ under the License.
     <SecurityGroupPermission groupId="FLEXADMIN" permissionId="OFBTOOLS_VIEW"/>
     <SecurityGroupPermission groupId="VIEWADMIN" permissionId="OFBTOOLS_VIEW"/>
     <SecurityGroupPermission groupId="BIZADMIN" permissionId="OFBTOOLS_VIEW"/>
-
+    <SecurityGroupPermission groupId="ventas" permissionId="OFBTOOLS_VIEW"/>
+    <SecurityGroupPermission groupId="ventas" permissionId="PARTYMGR_VIEW"/>
+    <SecurityGroupPermission groupId="ventas" permissionId="PARTYMGR_UPDATE"/>
+    <SecurityGroupPermission groupId="ventas" permissionId="PARTYMGR_CREATE"/>
     <!-- allocate userLoginId's -->
     <UserLoginSecurityGroup groupId="FULLADMIN" userLoginId="admin" fromDate="2001-01-01 12:00:00.0"/>
     <UserLoginSecurityGroup groupId="FLEXADMIN" userLoginId="flexadmin" fromDate="2001-01-01 12:00:00.0"/>

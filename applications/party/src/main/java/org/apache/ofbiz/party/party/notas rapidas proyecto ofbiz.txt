@@ -1,0 +1,3 @@
+aguardar el id en la tabla mensajes y de ahi se inserta 
+tabla mensajes 
+id --idparty --social ---edad --sexo ...

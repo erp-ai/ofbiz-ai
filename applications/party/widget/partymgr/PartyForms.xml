@@ -593,7 +593,7 @@ under the License.
         <field name="percentageUsed"><display/></field>
         <field name="deleteButton" widget-style="smallSubmit"><submit /></field>
     </form>
-
+    
     <form name="NewUser" type="single" target="${target}${previousParams}"
         focus-field-name="USER_TITLE" header-row-style="header-row" default-table-style="basic-table">
         <field name="USER_PARTY_ID" title="${uiLabelMap.PartyPartyId}" tooltip="${uiLabelMap.CommonIdGeneratedIfEmpty}"><text/></field>
@@ -620,7 +620,7 @@ under the License.
         </field>
         <field name="USER_STATE" title="${uiLabelMap.CommonState}" required-field="true"><drop-down allow-empty="false"/></field>
         <field name="USER_CITY" title="${uiLabelMap.CommonCity}" required-field="true"><text size="30" maxlength="60"/></field>
-        <!--   <field name="USER_STATE" title="${uiLabelMap.CommonState}" required-field="true"><drop-down allow-empty="false"/></field> -->
+        <!-- <field name="USER_STATE" title="${uiLabelMap.CommonState}" required-field="true"><drop-down allow-empty="false"/></field> -->
         <field name="USER_POSTAL_CODE" title="${uiLabelMap.CommonZipPostalCode}" required-field="true"><text size="10" maxlength="5" /></field>
         <!--  <field name="USER_COUNTRY" title="${uiLabelMap.CommonCountry}" required-field="true">
             <drop-down no-current-selected-key="${defaultCountryGeoId}">
@@ -683,10 +683,199 @@ under the License.
                 </entity-options>
             </drop-down>
         </field>
-        <field name="MENSAJE" title="${uiLabelMap.CommonMensaje}" required-field="true"><text size="30" maxlength="60"/></field>
+        <field name="SEXOOo" title="Sexo" required-field="true"><drop-down no-current-selected-key="Social">
+                <entity-options entity-name="Sexo" key-field-name="sexoo" description="${sexoo}">
+                    <entity-order-by field-name="par"/>
+                </entity-options>
+            </drop-down></field>
+       <field name="EDADo" title="Edad" required-field="true"><text size="30" maxlength="60"/></field>
+       <field name="COMUo" title="Se ha comunicado con nosotros antes? " required-field="true"><drop-down no-current-selected-key="Social">
+                <entity-options entity-name="optionn" key-field-name="option" description="${option}">
+                    <entity-order-by field-name="p"/>
+                </entity-options>
+            </drop-down></field>
+        <field name="MENSAJEo" title="Como se entero de nosotros?" required-field="true"><drop-down no-current-selected-key="Social">
+                <entity-options entity-name="Redes" key-field-name="social" description="${social}">
+                    <entity-order-by field-name="partyId"/>
+                </entity-options>
+            </drop-down></field>
         <field name="submitButton" title="${uiLabelMap.CommonSave}" widget-style="smallSubmit"><submit button-type="text-link"/></field>
-         </form>
+    </form>
+    <form name="NewProspec" type="single" target="${target}${previousParams}"
+        focus-field-name="USER_TITLE" header-row-style="header-row" default-table-style="basic-table">
+        <field name="dasocial" title="Marketing" title-area-style="group-label"><display description=" " also-hidden="false"/></field>
+        <field name="SEXOOo" title="Sexo" required-field="true"><drop-down no-current-selected-key="Social">
+                <entity-options entity-name="Sexo" key-field-name="sexoo" description="${sexoo}">
+                    <entity-order-by field-name="par"/>
+                </entity-options>
+            </drop-down></field>
+       <field name="EDADo" title="Edad" required-field="true"><text size="30" maxlength="60"/></field>
+       <field name="COMUo" title="Se ha comunicado con nosotros antes? " required-field="true"><drop-down no-current-selected-key="Social">
+                <entity-options entity-name="optionn" key-field-name="option" description="${option}">
+                    <entity-order-by field-name="p"/>
+                </entity-options>
+            </drop-down></field>
+        <field name="MENSAJEo" title="Como se entero de nosotros?" required-field="true"><drop-down no-current-selected-key="Social">
+                <entity-options entity-name="Redes" key-field-name="social" description="${social}">
+                    <entity-order-by field-name="partyId"/>
+                </entity-options>
+            </drop-down></field>
+        <field name="MobilePhoneTitle" title="${uiLabelMap.PartyContactMobilePhoneNumber}" title-area-style="group-label"><display description=" " also-hidden="false"/></field>
+        <field name="USER_MOBILE_COUNTRY" title="${uiLabelMap.CommonCountryCode}"><text size="4" maxlength="10"/></field>
+        <field name="USER_MOBILE_AREA" title="${uiLabelMap.PartyAreaCode}"><text size="4" maxlength="10"/></field>
+        <field name="USER_MOBILE_CONTACT" title="${uiLabelMap.PartyPhoneNumber}" required-field="true"><text size="15" maxlength="15"/></field>
+        <field name="USER_MOBILE_ALLOW_SOL" title="${uiLabelMap.PartyContactAllowSolicitation}?"><drop-down allow-empty="true"><option key="Y" description="${uiLabelMap.CommonY}"/><option key="N" description="${uiLabelMap.CommonN}"/></drop-down></field>
+        <field name="USE_ADDRESS"><hidden value="${USE_ADDRESS}"/></field>
+        <field name="require_email"><hidden value="${require_email}"/></field>
+        <field name="Info" title="Informacion del prospecto" title-area-style="group-label"><display description=" " also-hidden="false"/></field>
+        <field name="USER_FIRST_NAME" title="${uiLabelMap.PartyFirstName}" required-field="true"><text size="30" maxlength="60"/></field>
+        <field name="USER_LAST_NAME" title="${uiLabelMap.PartyLastName}" required-field="true"><text size="30" maxlength="60"/></field>
+        <!--<field name="USER_COUNTRY" title="${uiLabelMap.CommonCountry}" required-field="true">
+            <drop-down no-current-selected-key="${defaultCountryGeoId}">
+                <entity-options entity-name="Geo" key-field-name="geoId" description="${geoId}: ${geoName}">
+                    <entity-constraint name="geoTypeId" value="COUNTRY"/>
+                    <entity-order-by field-name="geoId"/>
+                </entity-options>
+            </drop-down>
+        </field>-->
+        <field name="USER_COUNTRY" title="${uiLabelMap.CommonCountry}" required-field="true">
+            <drop-down no-current-selected-key="${defaultCountryGeoId}">
+                <entity-options entity-name="Geo" key-field-name="geoId" description="${geoId}: ${geoName}">
+                    <entity-constraint name="geoTypeId" value="COUNTRY"/>
+                    <entity-order-by field-name="geoId"/>
+                </entity-options>
+            </drop-down>
+        </field>
+         <field name="USER_STATE" title="${uiLabelMap.CommonState}" required-field="true"><drop-down no-current-selected-key="${defaultCountryGeoId}">
+                <entity-options entity-name="Geo" key-field-name="geoId" description="${geoId}: ${geoName}">
+                    <entity-constraint name="geoTypeId" value="STATE"/>
+                    <entity-order-by field-name="geoTypeId"/>
+                </entity-options>
+            </drop-down></field>
+        <field name="USER_CITY" title="Municipio" required-field="true"><text size="30" maxlength="60"/></field>
+        <field name="USER_ADDRESS1" title="Direccion" required-field="true"><text size="30" maxlength="60"/></field>
+        <field name="USER_REFERENCIA" title="Referencia del lugar"><text size="30" maxlength="60"/></field>
+        <field name="USER_INTERIOR" title="Numero de interior"><text size="30" maxlength="60"/></field>
+        
+        
+        <!--<field name="USER_STATE" title="${uiLabelMap.CommonState}" required-field="true"><drop-down allow-empty="false"/></field>-->
+        <field name="USER_POSTAL_CODE" title="${uiLabelMap.CommonZipPostalCode}" required-field="true"><text size="10" maxlength="5" /></field>
+        
+        
+        
+        <field name="EmailAddressTitle" title="${uiLabelMap.PartyEmailAddress}" title-area-style="group-label"><display description=" " also-hidden="false"/></field>
+        <field use-when="require_email!=null" name="USER_EMAIL" title="${uiLabelMap.CommonEmail}" required-field="true"><text size="60" maxlength="250"/></field>
+        <field use-when="require_email==null" name="USER_EMAIL" title="${uiLabelMap.CommonEmail}" required-field="true"><text size="60" maxlength="250"/></field>
+        
+        <!-- <field name="USER_ORDER_EMAIL" title="Order Emails (comma separated)" ><text size="60" maxlength="250"/></field> aqui es prospecto-->
+       <field name="USERNAME"  title="Admitir publicidad?" required-field="false" attrs="{'invisible':1}"><drop-down no-current-selected-key="Social">
+                <entity-options entity-name="optionn" key-field-name="option" description="${option}">
+                    <entity-order-by field-name="p"/>
+                </entity-options>
+            </drop-down></field>
+        
+        
+        <!--<field name="RequiredNote" title=" "><display description="${uiLabelMap.PartyRequiredNote}" also-hidden="false"/></field> -->
 
+        
+        <field name="PRODUCT_STORE_ID" title="Product Store" tooltip="${uiLabelMap.CommonRequired}" widget-style="required">
+            <drop-down>
+                <entity-options entity-name="ProductStore" key-field-name="productStoreId" description="${storeName} (${productStoreId})">
+                    <entity-order-by field-name="productStoreId"/>
+                </entity-options>
+            </drop-down>
+        </field>
+        
+        <field name="submitButton" title="${uiLabelMap.CommonSave}" widget-style="smallSubmit"><submit button-type="text-link"/></field>
+        <!-- <field name="cancelLink" title=" " widget-style="smallSubmit">
+            <hyperlink description="${uiLabelMap.CommonCancelDone}" target="${donePage}" also-hidden="false">
+                <parameter param-name="segmentGroupId"/>
+            </hyperlink>
+        </field> -->
+    </form>
+    <!--<form name="NewProspecto" type="single" target="${target}${previousParams}"
+        focus-field-name="USER_TITLE" header-row-style="header-row" default-table-style="basic-table">
+        <field name="USE_ADDRESS"><hidden value="${USE_ADDRESS}"/></field>
+        <field name="require_email"><hidden value="${require_email}"/></field>
+        <field name="USER_FIRST_NAME" title="${uiLabelMap.PartyFirstName}" required-field="true"><text size="30" maxlength="60"/></field>
+        <field name="USER_LAST_NAME" title="${uiLabelMap.PartyLastName}" required-field="true"><text size="30" maxlength="60"/></field>
+        <field name="ShippingAddressTitle" title="${uiLabelMap.PartyAddressMailingShipping}" title-area-style="group-label"><display description=" " also-hidden="false"/></field>
+        <field name="USER_COUNTRY" title="${uiLabelMap.CommonCountry}" required-field="true">
+            <drop-down no-current-selected-key="${defaultCountryGeoId}">
+                <entity-options entity-name="Geo" key-field-name="geoId" description="${geoId}: ${geoName}">
+                    <entity-constraint name="geoTypeId" value="COUNTRY"/>
+                    <entity-order-by field-name="geoId"/>
+                </entity-options>
+            </drop-down>
+        </field>
+        <field name="USER_STATE" title="${uiLabelMap.CommonState}" required-field="true"><drop-down no-current-selected-key="${defaultCountryGeoId}">
+                <entity-options entity-name="Geo" key-field-name="geoId" description="${geoName}">
+                    <entity-constraint name="geoTypeId" value="STATE"/>
+                    <entity-order-by field-name="geoId"/>
+                </entity-options>
+            </drop-down></field>
+        <field name="USER_MUNICIPIO" title="${uiLabelMap.CommonMunicipio}"><drop-down no-current-selected-key="Social">
+                <entity-options entity-name="MuPuebla" key-field-name="Muni" description="${Muni}">
+                    <entity-order-by field-name="No"/>
+                </entity-options>
+            </drop-down></field>
+        <field name="USER_ADDRESS1" title="Direccion" required-field="true"><text size="30" maxlength="60"/></field>
+        <field name="USER_REFERENCIA" title="Referencia del lugar"><text size="30" maxlength="60"/></field>
+        <field name="USER_INTERIOR" title="Numero de interior"><text size="30" maxlength="60"/></field>
+        
+        <field name="USER_CITY" title="${uiLabelMap.CommonCity}" required-field="true"><text size="30" maxlength="60"/></field>-->
+        <!--   <field name="USER_STATE" title="${uiLabelMap.CommonState}" required-field="true"><drop-down allow-empty="false"/></field> -->
+        <!--<field name="USER_POSTAL_CODE" title="${uiLabelMap.CommonZipPostalCode}" required-field="true"><text size="10" maxlength="5" /></field>-->
+        <!--  <field name="USER_COUNTRY" title="${uiLabelMap.CommonCountry}" required-field="true">
+            <drop-down no-current-selected-key="${defaultCountryGeoId}">
+                <entity-options entity-name="Geo" key-field-name="geoId" description="${geoId}: ${geoName}">
+                    <entity-constraint name="geoTypeId" value="COUNTRY"/>
+                    <entity-order-by field-name="geoId"/>
+                </entity-options>
+            </drop-down>
+        </field> -->
+        <!--
+        <field name="MobilePhoneTitle" title="${uiLabelMap.PartyContactMobilePhoneNumber}" title-area-style="group-label"><display description=" " also-hidden="false"/></field>
+        <field name="USER_MOBILE_COUNTRY" title="${uiLabelMap.CommonCountryCode}"><text size="4" maxlength="10"/></field>
+        <field name="USER_MOBILE_AREA" title="${uiLabelMap.PartyAreaCode}"><text size="4" maxlength="10"/></field>
+        <field name="USER_MOBILE_CONTACT" title="${uiLabelMap.PartyPhoneNumber}" required-field="true" ><text size="15" maxlength="15"/></field>
+        <field name="USER_MOBILE_ALLOW_SOL" title="${uiLabelMap.PartyContactAllowSolicitation}?"><drop-down allow-empty="true"><option key="Y" description="${uiLabelMap.CommonY}"/><option key="N" description="${uiLabelMap.CommonN}"/></drop-down></field>
+        <field name="EmailAddressTitle" title="${uiLabelMap.PartyEmailAddress}" title-area-style="group-label"><display description=" " also-hidden="false"/></field>
+        <field use-when="require_email!=null" name="USER_EMAIL" title="${uiLabelMap.CommonEmail}" required-field="true"><text size="60" maxlength="250"/></field>
+        <field use-when="require_email==null" name="USER_EMAIL" title="${uiLabelMap.CommonEmail}" required-field="true"><text size="60" maxlength="250"/></field>
+        -->
+        <!--<field name="USER_ORDER_EMAIL" title="Order Emails (comma separated)" ><text size="60" maxlength="250"/></field>--> 
+        <!--<field use-when="displayPassword=='Y'" name="USERNAME" title="${uiLabelMap.CommonUsername}" required-field="true"><text size="30" maxlength="250"/></field>
+        <field use-when="displayPassword=='Y'" name="PASSWORD" title="${uiLabelMap.CommonPassword}" required-field="true"><password size="15" maxlength="250"/></field>
+        <field use-when="displayPassword=='Y'" name="CONFIRM_PASSWORD" title="${uiLabelMap.CommonPassword}" tooltip="* ${uiLabelMap.CommonConfirm}" required-field="true"><password size="15" maxlength="250"/></field>
+        <field use-when="displayPassword!='Y'" name="USERNAME" title="${uiLabelMap.CommonUsername}" tooltip="* ${uiLabelMap.PartyTemporaryPassword}" required-field="true"><text size="30" maxlength="250"/></field>
+        <field name="RequiredNote" title=" "><display description="${uiLabelMap.PartyRequiredNote}" also-hidden="false"/></field> -->
+        <!--<field name="PRODUCT_STORE_ID" title="Product Store" tooltip="${uiLabelMap.CommonRequired}" widget-style="required">
+            <drop-down>
+                <entity-options entity-name="ProductStore" key-field-name="productStoreId" description="${storeName} (${productStoreId})">
+                    <entity-order-by field-name="productStoreId"/>
+                </entity-options>
+            </drop-down>
+        </field> 
+       <field name="SEXOOo" title="Sexo" required-field="true"><drop-down no-current-selected-key="Social">
+                <entity-options entity-name="Sexo" key-field-name="sexoo" description="${sexoo}">
+                    <entity-order-by field-name="par"/>
+                </entity-options>
+            </drop-down></field>
+       <field name="EDADo" title="Edad" required-field="true"><text size="30" maxlength="60"/></field>
+       <field name="COMUo" title="Se ha comunicado con nosotros antes? " required-field="true"><drop-down no-current-selected-key="Social">
+                <entity-options entity-name="optionn" key-field-name="option" description="${option}">
+                    <entity-order-by field-name="p"/>
+                </entity-options>
+            </drop-down></field>
+        <field name="MENSAJEo" title="Como se entero de nosotros?" required-field="true"><drop-down no-current-selected-key="Social">
+                <entity-options entity-name="Redes" key-field-name="social" description="${social}">
+                    <entity-order-by field-name="partyId"/>
+                </entity-options>
+            </drop-down></field>
+        <field name="submitButton" title="${uiLabelMap.CommonSave}" widget-style="smallSubmit"><submit button-type="text-link"/></field>
+    </form>
+    -->
     <form name="ListSegmentRoles" type="list" target="updateSegmentGroupRole"
         odd-row-style="alternate-row" header-row-style="header-row-2" default-table-style="basic-table hover-bar">
         <actions>
@@ -712,7 +901,7 @@ under the License.
             </hyperlink>
         </field>
     </form>
-
+    
     <form name="AddSegmentRole" type="single" target="createSegmentRole" default-map-name="segmentGroupRole"
         focus-field-name="segmentGroupId" header-row-style="header-row" default-table-style="basic-table">
         <field name="segmentGroupId" title="${uiLabelMap.PartySegmentGroupId}">

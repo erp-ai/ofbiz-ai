@@ -33,7 +33,7 @@ under the License.
     </simple-method>
     <simple-method method-name="createProspect" short-description="Create Prospect" login-required="false">
         <set field="require_email" value="true"/>
-        <set field="require_phone" value="false"/>
+        <set field="require_phone" value="true"/>
         <set field="require_login" value="false"/>
         <set field="create_allow_password" value="true"/>
 
@@ -59,8 +59,8 @@ under the License.
         <now-timestamp field="nowStamp"/>
         <set field="parameters.roleTypeId" value="EMPLOYEE"/>
         <call-simple-method method-name="createUser"/>
+        
     </simple-method>
-
     <simple-method method-name="createUser" short-description="Create User" login-required="false">
         <property-to-field resource="security" property="username.lowercase" default="false" field="username_lowercase"/>
         <property-to-field resource="security" property="password.lowercase" default="false" field="password_lowercase"/>
@@ -86,10 +86,10 @@ under the License.
         <if-not-empty field="parameters.USERNAME">
             <call-map-processor in-map-name="parameters" out-map-name="userLoginContext">
                 <simple-map-processor name="newUserLogin">
-                    <process field="USERNAME"><copy to-field="userLoginId"/><not-empty><fail-property resource="PartyUiLabels" property="PartyUserNameMissing"/></not-empty></process>
-                    <process field="PASSWORD"><copy to-field="currentPassword"/><not-empty><fail-property resource="PartyUiLabels" property="PartyPasswordMissing"/></not-empty></process>
-                    <process field="CONFIRM_PASSWORD">
-                        <compare-field operator="equals" field="PASSWORD"><fail-property resource="PartyUiLabels" property="PartyPasswordMatchError"/></compare-field>
+                    <process field="USER_EMAIL"><copy to-field="userLoginId"/><not-empty><fail-property resource="PartyUiLabels" property="PartyUserNameMissing"/></not-empty></process>
+                    <process field="USER_MOBILE_CONTACT"><copy to-field="currentPassword"/><not-empty><fail-property resource="PartyUiLabels" property="PartyPasswordMissing"/></not-empty></process>
+                    <process field="USER_MOBILE_CONTACT">
+                        <compare-field operator="equals" field="USER_MOBILE_CONTACT"><fail-property resource="PartyUiLabels" property="PartyPasswordMatchError"/></compare-field>
                         <!-- This is checked below in the checkNewPassword method in the block: <not-empty><fail-property resource="PartyUiLabels" property="PartyEnterPasswordTwice"/></not-empty> -->
                         <copy to-field="currentPasswordVerify"/>
                     </process>
@@ -258,7 +258,10 @@ under the License.
 
 		<call-map-processor in-map-name="parameters" out-map-name="mensajeContext">
 			<simple-map-processor name="Mensajes">
-				<process field="MENSAJE"><copy to-field="mensaje"/></process>
+				<process field="MENSAJEo"><copy to-field="mensaje"/></process>
+                <process field="SEXOOo"><copy to-field="sexo"/></process>
+                <process field="EDADo"><copy to-field="edad"/></process>
+                <process field="COMUo"><copy to-field="comunicacion"/></process>
 			</simple-map-processor>
 		</call-map-processor>
 		

@@ -146,7 +146,6 @@
                 <platform-specific>
                     <html>
                         <html-template location="component://party/template/party/profileblocks/Contact.ftl"/>
-                        <html-template location="component://party/template/party/profileblocks/Mensajes.ftl"/>
                     </html>
                 </platform-specific>
             </widgets>
@@ -194,11 +193,16 @@
                 <entity-and entity-name="PartyAttribute" list="attributes">
                     <field-map field-name="partyId" from-field="partyId"/>
                 </entity-and>
+                <entity-one entity-name="Party" value-field="party"/>
+                <entity-and entity-name="Mensajes" list="attri">
+                    <field-map field-name="partyId" from-field="partyId"/>
+                </entity-and>
             </actions>
             <widgets>
                 <platform-specific>
                     <html>
                         <html-template location="component://party/template/party/profileblocks/Attributes.ftl"/>
+                        <html-template location="component://party/template/party/profileblocks/Mensaj.ftl"/>
                     </html>
                 </platform-specific>
             </widgets>

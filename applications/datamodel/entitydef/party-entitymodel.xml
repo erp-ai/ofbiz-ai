@@ -1291,7 +1291,30 @@ under the License.
     <entity entity-name="Mensajes" package-name="org.apache.ofbiz.party.party" title="Mensajes Entity">
    		<field name="partyId" type="description"></field>
    		<field name="mensaje" type="description"></field>
+      <field name="sexo" type="description"></field>
+      <field name="edad" type="description"></field>
+      <field name="comunicacion" type="description"></field>
    		<prim-key field="partyId"/>
+    </entity>
+    <entity entity-name="Redes" package-name="org.apache.ofbiz.party.party" title="Redes Entity">
+      <field name="partyId" type="description"></field>
+      <field name="social" type="description"></field>
+      <prim-key field="partyId"/>
+    </entity>
+    <entity entity-name="optionn" package-name="org.apache.ofbiz.party.party" title="Option Entity">
+      <field name="p" type="description"></field>
+      <field name="option" type="description"></field>
+      <prim-key field="p"/>
+    </entity>
+    <entity entity-name="Sexo" package-name="org.apache.ofbiz.party.party" title="Sexo Entity">
+      <field name="par" type="description"></field>
+      <field name="sexoo" type="description"></field>
+      <prim-key field="par"/>
+    </entity>
+    <entity entity-name="MuPuebla" package-name="org.apache.ofbiz.party.party" title="Puebla Entity">
+      <field name="No" type="description"></field>
+      <field name="Muni" type="description"></field>
+      <prim-key field="No"/>
     </entity>
     <entity entity-name="TelecomNumber"
             package-name="org.apache.ofbiz.party.contact"
