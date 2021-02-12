@@ -47,6 +47,7 @@ under the License.
     <SecurityPermission description="Can update Email communication events for logged-in user." permissionId="PARTYMGR_CME-EMAIL_UPDATE"/>
     <SecurityPermission description="Can delete Email communication events for logged-in user." permissionId="PARTYMGR_CME-EMAIL_DELETE"/>
     <SecurityPermission description="Can create Internal note communication event for logged-in user." permissionId="PARTYMGR_CME-NOTE_CREATE"/>
+    <SecurityPermission description="Permiso de ingreser a la pestaña de nuevo prospecto" permissionId="PARTYMGR_INP"/>
 
     <!-- Security Management security -->
     <SecurityPermission description="View operations in the Security Management Screens." permissionId="SECURITY_VIEW"/>

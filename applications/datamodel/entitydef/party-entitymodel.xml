@@ -3103,5 +3103,102 @@ under the License.
             <key-map field-name="partyClassificationTypeId"/>
         </view-link>
     </view-entity>
-    
+
+    <view-entity entity-name="ConsultaProspecto"
+            package-name="org.apache.ofbiz.party.party"
+            title="Vista que permite consultar los prospectos por medio del user_login y de quien lo creo">
+      <member-entity entity-alias="PT" entity-name="Party"/>
+      <member-entity entity-alias="PS" entity-name="Person"/>
+      <member-entity entity-alias="PR" entity-name="PartyRole"/>
+      <alias entity-alias="PT" name="partyId"/>
+      <alias entity-alias="PT" name="createdByUserLogin"/>
+      <alias entity-alias="PT" name="createdDate"/>
+      <alias entity-alias="PR" name="roleTypeId"/>
+      <alias entity-alias="PS" name="firstName"/>
+      <alias entity-alias="PS" name="lastName"/>
+      <view-link entity-alias="PT" rel-entity-alias="PS">
+        <key-map field-name="partyId"/>
+      </view-link>
+      <view-link entity-alias="PT" rel-entity-alias="PR">
+        <key-map field-name="partyId"/>
+        <entity-condition>
+          <condition-expr entity-alias="PR" field-name="roleTypeId" operator="equals" value="PROSPECT"/>    
+        </entity-condition>
+      </view-link>
+    </view-entity>
+
+    <view-entity entity-name="DatosProspecto" package-name="org.apache.ofbiz.party.party" title="Party Relationship And Contact Mech Details">
+        <member-entity entity-alias="PTY" entity-name="Party"/>
+        <member-entity entity-alias="PER" entity-name="Person"/>
+        <member-entity entity-alias="PR" entity-name="PartyRole"/>
+        <member-entity entity-alias="PCM" entity-name="PartyContactMech"/>
+        <member-entity entity-alias="PA" entity-name="PostalAddress"/>
+        <member-entity entity-alias="TN" entity-name="TelecomNumber"/>
+        <alias-all entity-alias="PTY">
+            <exclude field="statusId"/>
+            <exclude field="preferredCurrencyUomId"/>
+            <exclude field="description"/>
+            <exclude field="dataSourceId"/>
+            <exclude field="externalId"/>
+            <exclude field="isUnread"/>
+            <exclude field="partyTypeId"/>
+            <exclude field="partyId"/>
+        </alias-all>  
+        <alias entity-alias="PTY" name="partyId"/>
+        <alias entity-alias="PER" name="firstName"/>
+        <alias entity-alias="PER" name="lastName"/>
+        <alias entity-alias="PA" name="city"/>
+        <alias entity-alias="TN" name="contactNumber"/>
+        <alias entity-alias="PR" name="roleTypeId"/>
+        <view-link entity-alias="PTY" rel-entity-alias="PER" rel-optional="true">
+            <key-map field-name="partyId"/>
+        </view-link>
+        <view-link entity-alias="PTY" rel-entity-alias="PCM">
+            <key-map field-name="partyId"/>
+        </view-link>
+        <view-link entity-alias="PCM" rel-entity-alias="PA" rel-optional="true">
+            <key-map field-name="contactMechId"/>
+        </view-link>
+        <view-link entity-alias="PCM" rel-entity-alias="TN" rel-optional="true">
+            <key-map field-name="contactMechId"/>
+        </view-link>
+        <relation type="one-nofk" rel-entity-name="Party">
+            <key-map field-name="partyId"/>
+        </relation>
+        <relation type="one-nofk" rel-entity-name="PostalAddress">
+            <key-map field-name="contactMechId"/>
+        </relation>
+        <relation type="one-nofk" rel-entity-name="TelecomNumber">
+            <key-map field-name="contactMechId"/>
+        </relation>
+        <view-link entity-alias="PTY" rel-entity-alias="PR">
+            <key-map field-name="partyId"/>
+            <entity-condition>
+                <condition-expr entity-alias="PR" field-name="roleTypeId" operator="equals" value="PROSPECT"/>    
+            </entity-condition>
+        </view-link>
+    </view-entity>
+
+    <view-entity entity-name="EjemploVista"
+            package-name="org.apache.ofbiz.party.party"
+            title="Vista de ejemplo">
+      <member-entity entity-alias="PT" entity-name="Party"/>
+      <member-entity entity-alias="PS" entity-name="Person"/>
+      <member-entity entity-alias="PR" entity-name="PartyRole"/>
+      <alias entity-alias="PT" name="partyId"/>
+      <alias entity-alias="PT" name="createdByUserLogin"/>
+      <alias entity-alias="PT" name="createdDate"/>
+      <alias entity-alias="PR" name="roleTypeId"/>
+      <alias entity-alias="PS" name="firstName"/>
+      <alias entity-alias="PS" name="lastName"/>
+      <view-link entity-alias="PT" rel-entity-alias="PS">
+        <key-map field-name="partyId"/>
+      </view-link>
+      <view-link entity-alias="PT" rel-entity-alias="PR">
+        <key-map field-name="partyId"/>
+        <entity-condition>
+          <condition-expr entity-alias="PR" field-name="roleTypeId" operator="equals" value="PROSPECT"/>    
+        </entity-condition>
+      </view-link>
+    </view-entity>
 </entitymodel>

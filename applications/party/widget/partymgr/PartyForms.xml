@@ -530,7 +530,32 @@ under the License.
             </hyperlink>
         </field>
     </form>
-
+<!--My prospect-->
+    <form name="listProspects" list-name="listIt" target="" title="" type="list" view-size="99999"
+        odd-row-style="alternate-row" header-row-style="header-row-2" default-table-style="basic-table hover-bar" paginate="false">
+        <actions>
+            <entity-condition entity-name="ConsultaProspecto">
+               <condition-list combine="and">
+                    <condition-list combine="or">
+                        <condition-expr field-name="createdByUserLogin" value="${userLogin.userLoginId}" operator="equals"/>
+                    </condition-list>
+                </condition-list>
+                <order-by field-name="partyId"/>
+            </entity-condition>
+        </actions>
+            <field name="partyId" sort-field="true">
+                    <hyperlink description="${partyId}" target="viewprofile">
+                        <parameter param-name="partyId"/>
+                    </hyperlink>
+            </field>
+        <field name="createdByUserLogin" title="createdByUserLogin"><display/></field>
+        <field name="groupName" title="groupName"><display/></field>
+        <field name="firstName" title="firstName"><display/></field>
+        <field name="lastName" title="lastName"><display/></field>
+        <field name="roleTypeId" title="roleTypeId"><display/></field>
+        <field name="emailAddress" title="emailAddress"><display/></field>
+    
+    </form>
     <!-- PartyRate -->
     <form name="AddPartyRate" type="single" target="updatePartyRate"
         focus-field-name="rateTypeId" header-row-style="header-row" default-table-style="basic-table">
@@ -659,23 +684,12 @@ under the License.
         <field name="EmailAddressTitle" title="${uiLabelMap.PartyEmailAddress}" title-area-style="group-label"><display description=" " also-hidden="false"/></field>
         <field use-when="require_email!=null" name="USER_EMAIL" title="${uiLabelMap.CommonEmail}" required-field="true"><text size="60" maxlength="250"/></field>
         <field use-when="require_email==null" name="USER_EMAIL" title="${uiLabelMap.CommonEmail}" required-field="true"><text size="60" maxlength="250"/></field>
-        <field name="USER_EMAIL_ALLOW_SOL" title="${uiLabelMap.PartyContactAllowSolicitation}?"><drop-down allow-empty="true"><option key="Y" description="${uiLabelMap.CommonY}"/><option key="N" description="${uiLabelMap.CommonN}"/></drop-down></field>
         <!-- <field name="USER_ORDER_EMAIL" title="Order Emails (comma separated)" ><text size="60" maxlength="250"/></field> -->
-        <field use-when="displayPassword=='Y'" name="USERNAME" title="${uiLabelMap.CommonUsername}" required-field="true"><text size="30" maxlength="250"/></field>
-        <field use-when="displayPassword=='Y'" name="PASSWORD" title="${uiLabelMap.CommonPassword}" required-field="true"><password size="15" maxlength="250"/></field>
-        <field use-when="displayPassword=='Y'" name="CONFIRM_PASSWORD" title="${uiLabelMap.CommonPassword}" tooltip="* ${uiLabelMap.CommonConfirm}" required-field="true"><password size="15" maxlength="250"/></field>
-        <field use-when="displayPassword!='Y'" name="USERNAME" title="${uiLabelMap.CommonUsername}" tooltip="* ${uiLabelMap.PartyTemporaryPassword}" required-field="true"><text size="30" maxlength="250"/></field>
-        <!--<field name="RequiredNote" title=" "><display description="${uiLabelMap.PartyRequiredNote}" also-hidden="false"/></field> -->
-
-        <field name="securityQuestion">
-          <drop-down allow-empty="true">
-              <entity-options entity-name="Enumeration" key-field-name="enumId" description="${description}">
-                 <entity-constraint name="enumTypeId" operator="equals" value="SQ_STANDARD" /> 
-              </entity-options>
-          </drop-down>
-        </field>
-        <field name="securityAnswer" title="${uiLabelMap.SecurityAnswer}"><text /></field>
-
+        <field name="USERNAME"  title="${uiLabelMap.PartyContactAllowSolicitation}?" required-field="false" attrs="{'invisible':1}"><drop-down no-current-selected-key="Social">
+                <entity-options entity-name="optionn" key-field-name="option" description="${option}">
+                    <entity-order-by field-name="p"/>
+                </entity-options>
+            </drop-down></field>
         <field name="PRODUCT_STORE_ID" title="Product Store" tooltip="${uiLabelMap.CommonRequired}" widget-style="required">
             <drop-down>
                 <entity-options entity-name="ProductStore" key-field-name="productStoreId" description="${storeName} (${productStoreId})">
@@ -768,7 +782,7 @@ under the License.
         <field use-when="require_email==null" name="USER_EMAIL" title="${uiLabelMap.CommonEmail}" required-field="true"><text size="60" maxlength="250"/></field>
         
         <!-- <field name="USER_ORDER_EMAIL" title="Order Emails (comma separated)" ><text size="60" maxlength="250"/></field> aqui es prospecto-->
-       <field name="USERNAME"  title="Admitir publicidad?" required-field="false" attrs="{'invisible':1}"><drop-down no-current-selected-key="Social">
+       <field name="USERNAME"  title="Se enviara publicidad al correo ingresado" required-field="false" attrs="{'invisible':1}"><drop-down no-current-selected-key="Social">
                 <entity-options entity-name="optionn" key-field-name="option" description="${option}">
                     <entity-order-by field-name="p"/>
                 </entity-options>
@@ -785,7 +799,7 @@ under the License.
                 </entity-options>
             </drop-down>
         </field>
-        
+       
         <field name="submitButton" title="${uiLabelMap.CommonSave}" widget-style="smallSubmit"><submit button-type="text-link"/></field>
         <!-- <field name="cancelLink" title=" " widget-style="smallSubmit">
             <hyperlink description="${uiLabelMap.CommonCancelDone}" target="${donePage}" also-hidden="false">
@@ -1634,6 +1648,67 @@ under the License.
         <field name="submitButton" title="${uiLabelMap.CommonUpload}"><submit button-type="button"/></field>
     </form>
     
-
+   <form name="ExportPartyCsv2" list-name="listIt" target="" title="" type="list" view-size="99999"
+        odd-row-style="alternate-row" header-row-style="header-row-2" default-table-style="basic-table hover-bar" paginate="false">
+        <actions>
+            <entity-condition entity-name="EjemploVista">
+                <condition-list combine="and">
+                    <condition-list combine="or">
+                        <condition-expr field-name="createdByUserLogin" value="${userLogin.userLoginId}" operator="equals"/>
+                    </condition-list>
+                </condition-list>
+                <order-by field-name="partyId"/>
+            </entity-condition>
+        </actions>
+        <field name="partyId" sort-field="true">
+            <hyperlink description="${partyId}" target="viewprofile">
+                <parameter param-name="partyId"/>
+            </hyperlink>
+        </field>
+        <field name="firstName" title="firstName"><display/></field>
+        <field name="lastName" title="lastName"><display/></field>
+        <field name="createdDate" sort-field="true" title="createdDate"><display/></field>
+        <sort-order>
+             <last-field name="createdDate"/>
+             
+        </sort-order>
+    </form>
+    <!--.ejemplo prueba. -->
+   <form name="FindOfbiz" type="single" target="FindOfbiz" default-entity-name="Ofbiz">
+    <field name="noConditionFind"><hidden value="Y"/> <!--<field name="createdByUserLogin"><hidden value="Y"/> if this isn't there then with all fields empty no query will be done --> </field>
     
+    <field name="partyId" title="Id"><text-find/></field>
+    <field name="firstName" title="Nombre"><text-find/></field>
+    <field name="lastName" title="Apellido"><text-find/></field>
+    <field name="createdByUserLogin" title="createdByUserLogin"><hidden value="${userLogin.userLoginId}"/></field>
+    <field name="contactNumber" title="Telefono"><text-find/></field>
+    <field name="city" title="Ciudad"><text-find/></field>
+    <field name="searchButton" title="${uiLabelMap.CommonFind}" widget-style="smallSubmit"><submit button-type="button" image-location="/images/icons/magnifier.png"/></field>
+</form>
+  
+<form name="ListOfbiz" type="list" list-name="listIt" paginate-target="FindOfbiz" default-entity-name="EjemploVista" separate-columns="true"
+    odd-row-style="alternate-row" header-row-style="header-row-2" default-table-style="basic-table hover-bar">
+    <actions>
+       <!-- Preparing search results for user query by using OFBiz stock service to perform find operations on a single entity or view entity -->
+       <service service-name="performFind" result-map="result" result-map-list="listIt">
+           <field-map field-name="inputFields" from-field="ofbizCtx"/>
+           <field-map field-name="entityName" value="DatosProspecto"/>
+           <field-map field-name="orderBy" from-field="parameters.sortField"/>
+           <field-map field-name="viewIndex" from-field="viewIndex"/>
+           <field-map field-name="viewSize" from-field="viewSize"/>
+        </service>
+    </actions>
+    <field name="partyId" sort-field="true">
+            <hyperlink description="${partyId}" target="viewprofile">
+                <parameter param-name="partyId"/>
+            </hyperlink>
+    </field>
+    <field name="firstName" title="Nombre"><display/></field>
+    <field name="lastName" title="Apellido"><display/></field>
+    <field name="city" title="city"><display/></field>
+    <field name="contactNumber" title="contactNumber"><display/></field>
+    <field name="createdDate" title="Fecha de creacion"><display/></field>
+    <field name="lastModifiedDate" title="ultima modicicacion "><display/></field>
+    
+</form>
 </forms>

@@ -365,6 +365,20 @@ under the License.
         <response name="error" type="view" value="NewProspect"/>
     </request-map>
 
+    <request-map uri="NewProspecto"><security https="true" auth="true"/><response name="success" type="view" value="NewProspecto"/></request-map>
+    <request-map uri="createProspect">
+        <security https="true" auth="true"/>
+        <event type="simple" path="component://party/minilang/user/UserEvents.xml" invoke="createProspect"/>
+        <response name="success" type="view" value="viewprofile"/>
+        <response name="error" type="view" value="NewProspecto"/>
+    </request-map>
+
+    <!-- Mapeo de Prospectos-->
+    <request-map uri="MyProspects">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="MyProspects"></response>
+    </request-map>
+
     <request-map uri="NewEmployee"><security https="true" auth="true"/><response name="success" type="view" value="NewEmployee"/></request-map>
     <request-map uri="createEmployee">
         <security https="true" auth="true"/>
@@ -1305,6 +1319,16 @@ under the License.
 
     <!-- end of request mappings -->
 
+    <request-map uri="FindOfbiz">
+    <security https="true" auth="true"/>
+    <response name="success" type="view" value="FindOfbiz"/></request-map>
+
+
+    <view-map name="FindOfbiz" type="screen" page="component://party/widget/partymgr/PartyScreens.xml#FindOfbiz"/>
+    <view-map name="main" type="screen" page="component://party/widget/partymgr/PartyScreens.xml#findparty"/>
+
+    <view-map name="findparty" type="screen" page="component://party/widget/partymgr/PartyScreens.xml#findparty"/>
+
     <!-- View Mappings -->
     <view-map name="main" type="screen" page="component://party/widget/partymgr/PartyScreens.xml#findparty"/>
 
@@ -1369,6 +1393,8 @@ under the License.
 
     <view-map name="NewCustomer" type="screen" page="component://party/widget/partymgr/PartyScreens.xml#NewCustomer"/>
     <view-map name="NewProspect" type="screen" page="component://party/widget/partymgr/PartyScreens.xml#NewProspect"/>
+    <view-map name="NewProspecto" type="screen" page="component://party/widget/partymgr/PartyScreens.xml#NewProspecto"/>
+    <view-map name="MyProspects" type="screen" page="component://party/widget/partymgr/PartyScreens.xml#MyProspects"/>"
     <view-map name="NewEmployee" type="screen" page="component://party/widget/partymgr/PartyScreens.xml#NewEmployee"/>
 
     <view-map name="EditPartyClassifications" type="screen" page="component://party/widget/partymgr/PartyClassificationScreens.xml#EditPartyClassifications"/>
